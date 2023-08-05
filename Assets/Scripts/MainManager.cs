@@ -2,12 +2,15 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.SceneManagement;
+using TMPro;
 
 
 public class MainManager : MonoBehaviour
 {
     private static MainManager instance;
     public static MainManager Instance;
+    public AttachVehicleToDropdown attachVehicleToDropdown;
+        
 
     private void Awake()
     {
@@ -20,6 +23,8 @@ public class MainManager : MonoBehaviour
         Instance = this;
         DontDestroyOnLoad(gameObject);
     }
+
+   
 
     public void StartGame()
     {

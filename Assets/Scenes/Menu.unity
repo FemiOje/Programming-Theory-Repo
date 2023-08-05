@@ -1708,6 +1708,7 @@ GameObject:
   - component: {fileID: 1287299164}
   - component: {fileID: 1287299163}
   - component: {fileID: 1287299162}
+  - component: {fileID: 1287299165}
   m_Layer: 5
   m_Name: Dropdown
   m_TagString: Untagged
@@ -1792,8 +1793,6 @@ MonoBehaviour:
       m_Image: {fileID: 0}
     - m_Text: Blue Car
       m_Image: {fileID: 0}
-    - m_Text: Truck
-      m_Image: {fileID: 0}
     - m_Text: Tank
       m_Image: {fileID: 0}
     - m_Text: Bus
@@ -1842,6 +1841,26 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1287299160}
   m_CullTransparentMesh: 1
+--- !u!114 &1287299165
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1287299160}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 74695cf04d7bba549895fe19871783ef, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  dropdown: {fileID: 1287299162}
+  vehicleList:
+  - {fileID: 6114593770284572728, guid: 20bf4b6e098b7114fb9fbf8e7472c5a4, type: 3}
+  - {fileID: 4627345388854818688, guid: 7d38f39be8e8ec84295a60115104b291, type: 3}
+  - {fileID: 7366334725166259957, guid: 4d24fb9ce8da26e4f9d0e49f1d6b6562, type: 3}
+  - {fileID: 3243820402056157764, guid: 2bec04e51404e4f4a9a66cf75851fb9a, type: 3}
+  - {fileID: 8243579620308672440, guid: 56a8a9949ed272b47907f6129b76a574, type: 3}
+  selectedVehicle: {fileID: 0}
 --- !u!1 &1551785249
 GameObject:
   m_ObjectHideFlags: 0
@@ -1871,6 +1890,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 4179176cb44f69442bcb69e1915a08a5, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  attachVehicleToDropdown: {fileID: 1287299165}
 --- !u!4 &1551785251
 Transform:
   m_ObjectHideFlags: 0
