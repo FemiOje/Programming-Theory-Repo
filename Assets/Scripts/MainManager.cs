@@ -17,7 +17,7 @@ public class MainManager : MonoBehaviour
             return;
         }
 
-        instance = this;
+        Instance = this;
         DontDestroyOnLoad(gameObject);
     }
 

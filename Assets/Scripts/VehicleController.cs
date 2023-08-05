@@ -6,11 +6,22 @@ using UnityEngine;
 public class VehicleController : MonoBehaviour
 {
     public List<AxleInfo> axleInfos; // the information about each individual axle
-    private float maxMotorTorque = 4000.0f; // maximum torque the motor can apply to wheel
-    private float maxSteeringAngle = 70.0f; // maximum steer angle the wheel can have
+    
+    // INHERITANCE
+    protected float maxMotorTorque = 4000.0f; // maximum torque the motor can apply to wheel
+    
+    // INHERITANCE
+    protected float maxSteeringAngle = 70.0f; // maximum steer angle the wheel can have
 
     public void FixedUpdate()
     {
+        // ABSTRACTION
+        HandleMovement();
+    }
+
+    protected void HandleMovement() //ABSTRACTION
+    {
+
         float motor = maxMotorTorque * Input.GetAxis("Vertical");
         float steering = maxSteeringAngle * Input.GetAxis("Horizontal");
 
@@ -25,9 +36,6 @@ public class VehicleController : MonoBehaviour
             {
                 axleInfo.leftWheel.motorTorque = motor;
                 axleInfo.rightWheel.motorTorque = motor;
-
-                //axleInfo.leftWheel.brakeTorque = motor;
-                //axleInfo.rightWheel.brakeTorque = motor;
             }
         }
     }
