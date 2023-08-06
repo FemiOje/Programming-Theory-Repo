@@ -6,11 +6,11 @@ using UnityEngine;
 public class VehicleController : MonoBehaviour
 {
     public List<AxleInfo> axleInfos; // the information about each individual axle
-    
-    // INHERITANCE
+
+    // ENCAPSULATION( ONLY CHILDREN CLASSES CAN ACCESS THIS)
     protected float maxMotorTorque = 4000.0f; // maximum torque the motor can apply to wheel
     
-    // INHERITANCE
+    // ENCAPSULATION( ONLY CHILDREN CLASSES CAN ACCESS THIS)
     protected float maxSteeringAngle = 70.0f; // maximum steer angle the wheel can have
 
     public void FixedUpdate()
@@ -19,9 +19,8 @@ public class VehicleController : MonoBehaviour
         HandleMovement();
     }
 
-    protected void HandleMovement() //ABSTRACTION
-    {
-
+    protected virtual void HandleMovement() //ABSTRACTION
+    { // ALL VEHICLES INHERIT THE HANDLEMOVEMENT METHOD
         float motor = maxMotorTorque * Input.GetAxis("Vertical");
         float steering = maxSteeringAngle * Input.GetAxis("Horizontal");
 

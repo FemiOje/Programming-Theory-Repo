@@ -4,6 +4,9 @@ using UnityEngine;
 
 public class Tank : VehicleController //INHERITANCE
 {
-    //private float maxMotorTorque = 40000.0f; // maximum torque the motor can apply to wheel
-    //private float maxSteeringAngle = 70.0f; // maximum steer angle the wheel can have
+    private void Update()
+    {
+        maxMotorTorque = 5000.0f;
+        maxSteeringAngle = 80.0f;
+    }
 }

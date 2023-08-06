@@ -31,13 +31,6 @@ public class AttachVehicleToDropdown : MonoBehaviour
 
             // Save the selected vehicle name to a PlayerPrefs to pass it to the next scene
             PlayerPrefs.SetString("SelectedVehicleName", selectedVehicleName);
-
-
-            // Get the selected GameObject
-            //selectedVehicle = vehicleList[optionIndex];
-
-            // Attach the selected GameObject to this GameObject (script's GameObject)
-            //selectedVehicle.transform.SetParent(this.transform, false);
         }
     }
 }
